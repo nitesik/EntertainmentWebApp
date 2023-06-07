@@ -1,7 +1,6 @@
 "use client"
 import { useEffect, useState } from "react";
 import { useAtom } from "jotai";
-import { bookmarkAtom } from "../page";
 import styles from "./MoviesStyle.module.css";
 import Image from "next/image";
 import search_icon from "../../../public/assets/icon-search.svg";
@@ -11,8 +10,12 @@ import movies from "../../../public/assets/icon-category-movie.svg";
 import tv_series from "../../../public/assets/icon-category-tv.svg";
 import bookmark_empty from "../../../public/assets/icon-bookmark-empty.svg"
 import bookmark_full from "../../../public/assets/icon-bookmark-full.svg"
+import { atomWithStorage } from "jotai/utils";
 
 type BookMarkType = typeof data[0];
+
+const bookmarkAtom = atomWithStorage<BookMarkType[]>("bookmark", []);
+
 
 function Page() {
 

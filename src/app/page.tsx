@@ -16,7 +16,7 @@ import { JsxElement } from 'typescript';
 
 type BookMarkType = typeof data[0];
 
-export const bookmarkAtom = atomWithStorage<BookMarkType[]>("bookmark", []);
+const bookmarkAtom = atomWithStorage<BookMarkType[]>("bookmark", []);
 
 export default function Home() {
 
