@@ -1,7 +1,7 @@
 "use client"
 import { useEffect, useState } from "react";
 import { useAtom } from "jotai";
-import styles from "./TVShowsStyles.module.css";
+import styles from "../page.module.css";
 import Image from "next/image";
 import search_icon from "../../../public/assets/icon-search.svg";
 import play_icon from "../../../public/assets/icon-play.svg";
